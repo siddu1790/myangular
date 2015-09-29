@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+    <!-- Portfolio Item Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Sid Barret
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Portfolio Item Row -->
+    <div class="row" ng-controller="HomeItemCtrl as homeItem">
+
+        <div class="col-md-4">
+            <img class="img-responsive" src="{{ homeItem.imgSrc }}" alt="">
+        </div>
+
+        <div ng-controller="HomeTabCtrl as homeTab" class="col-md-6">
+            <h3>{{homeItem.itemTitle}}</h3>
+            <p>{{homeItem.description}}</p>
+            <p>{{homeItem.description1}}</p>
+            <h3>Details</h3>
+            <ul class="nav nav-tabs">
+                <li ng-click="homeTab.setTab(0)" class="active">
+                    <a href="#">Press</a>
+                </li>
+                <li ng-click="homeTab.setTab(1)"><a href="#">Links</a></li>
+                <li ng-click="homeTab.setTab(2)"><a href="#">signup</a></li>
+            </ul>
+            <div ng-show="(homeTab.tab==0)">News on Press</div>
+            <div ng-show="(homeTab.tab==1)">Quick liks on the page </div>
+            <div ng-show="(homeTab.tab==2)">Signup link for this event</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>BIOGRAPHY</h3>
+                <p>Siddartha Barret Kethireddy was born on May 17, 1990 in Telangana , India. The young sid was actively encouraged in his music and art by his parents, at the age of seven he won a piano duet competition with his sister and he was to be successful in poetry contests while at Gabriels High School.</p>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Sid Barret 2015</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>

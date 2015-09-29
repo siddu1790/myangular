@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+ <!-- Portfolio Item Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Sid Barret Concert Event
+        </h1>
+        <h3>September 24th, 2015</h3>
+    </div>
+</div>
+<!-- /.row -->
+<!-- Portfolio Item Row -->
+<div class="row" ng-controller="EventItemCtrl as eventItem">
+
+    <div class="col-md-4">
+        <img class="img-responsive" src="{{ eventItem.imgSrc }}" alt="">
+    </div>
+
+    <div class="col-md-6">
+        <h3>{{eventItem.itemTitle}}</h3>
+        <p>{{eventItem.description}}</p>
+    </div>
+
+</div>
+<!-- /.row -->
+<!-- Related Projects Row -->
+<div ng-controller="EventCtrl as event" class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header">Next Events</h3>
+    </div>
+
+    <div class="col-lg-12">
+        Search City : <input type="text" ng-model="event.search" placeholder="Search by City">
+        <hr />
+
+    </div>
+    <event-item></event-item>
+</div>
+
+
+<!-- /.row -->
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Copyright &copy; Sid Barret 2015</p>
+        </div>
+    </div>
+    <!-- /.row -->
+</footer>
